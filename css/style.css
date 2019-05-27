@@ -1,0 +1,209 @@
+* {
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+html {
+    font-weight: 300;
+
+}
+
+nav ul a,
+nav .brand-logo {
+    color: #444;
+}
+
+p {
+    line-height: 2rem;
+}
+
+/*icon row*/
+
+.icon-row i {
+
+    -webkit-transition-duration: 0.20s;
+}
+
+.icon-row i:hover {
+    font-size: 4.5em;
+    color: black !important;
+}
+
+/* portfolio row */
+
+#portfolio {
+    width: 100%;
+
+}
+
+#portfolio .row .col {
+    padding: 0 !important;
+    color: black;
+}
+
+#portfolio .col {
+    padding: 0 !important;
+}
+
+.port-row .grid {
+    padding: 0 !important;
+}
+
+#portfolio .port-row {
+    margin-bottom: 0 !important;
+}
+
+#logo-container {
+    background-color: white;
+    border-bottom: 4px solid #4D5854;
+    border-right: 1px solid #F3F2F0;
+    border-left: 1px solid #F3F2F0;
+}
+
+#sig {
+    width: 90px;
+    padding: 10px 15px 0 15px;
+}
+
+#myName {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    font-family: 'Biryani', sans-serif;
+    font-weight: 200;
+    margin-top: 180px;
+}
+
+.custom-text {
+    color: #F3F3F3;
+}
+
+.myBackgroundColor {
+    background-color: #8ABEED;
+}
+
+.secondaryTextColor {
+    color: #F3F3F3;
+}
+
+.button-collapse {
+    color: #26a69a;
+}
+
+.parallax-container {
+    min-height: 380px;
+    line-height: 0;
+    height: auto;
+    color: rgba(255, 255, 255, .9);
+}
+
+.parallax-container .section {
+    width: 100%;
+}
+
+#portlandPan {
+    max-height: 100%;
+}
+
+.custom-center-align {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.fadeInBlock {
+    opacity: 0;
+}
+
+#selfPic {
+    border: 3px solid white;
+    position: absolute;
+    left: 0;
+    margin-top: -212px;
+    margin-left: 10px;
+    float: left;
+    width: 18rem;
+}
+
+.grid figure {
+    float: none;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.87);
+}
+
+.icons {
+    position: relative;
+}
+
+
+.footer a:link,
+.footer a:visited,
+.footer a:active,
+.footer a[href^="mailto:"],
+a {
+    color: white;
+}
+
+.inset-shadow {
+    box-shadow: 50px 50px 80px 50px rgba(0, 0, 0, 0.55) inset, -50px -50px 80px 50px rgba(0, 0, 0, 0.55);
+}
+
+@media only screen and (max-width: 992px) {
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+    }
+
+    #index-banner .section {
+        bottom: 10%;
+    }
+
+    #myName {
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+        font-family: 'Biryani', sans-serif;
+        margin-top: 180px;
+    }
+
+    #webDev {
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+    }
+
+    #selfPic {
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #index-banner .section {
+        bottom: 0;
+    }
+
+    #myName {
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+        font-family: 'Biryani', sans-serif;
+        margin-top: 180px;
+    }
+
+    #webDev {
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+    }
+}
+
+.icon-block {
+    padding: 0 15px;
+}
+
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+footer.page-footer {
+    margin: 0;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html ng-app="weatherApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="js/angular.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body ng-controller="myCtrl">
+
+    <div class="container top hidden">
+      <div id="top" class="main-header jumbotron text-center">
+
+        <div class="hero row" id="jumbo">
+          <div class="col-sm-4 col-md-4">
+            <h1>Today</h1>
+          </div>
+          <div class="col-sm-4 col-md-4">
+            <h3>{{place.location.city}}</h3>
+            <img src="{{place.current_observation.icon_url}}">
+          </div>
+          <div class="col-sm-4 col-md-4">
+            <h1>{{place.forecast.simpleforecast.forecastday[0].high.fahrenheit}}°</h1>
+            <h3>{{place.forecast.simpleforecast.forecastday[0].conditions}}</h3>
+
+          </div>
+
+
+        </div>
+
+          <div class="row center-block mid-content">
+
+              <div class="col-md-4 col-sm-4 day">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <img class="day-image" src="{{place.forecast.txt_forecast.forecastday[1].icon_url}}" >
+                    <p class="day-name">{{place.forecast.simpleforecast.forecastday[1].date.weekday}}</p>
+                  </div>
+                  <div class="flex">
+                    <span class="degs col-xs-3">{{place.forecast.simpleforecast.forecastday[1].high.fahrenheit}}°</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-4 day">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <img class="day-image" src="{{place.forecast.txt_forecast.forecastday[2].icon_url}}" >
+                    <p class="day-name">{{place.forecast.simpleforecast.forecastday[2].date.weekday}}</p>
+                  </div>
+
+                  <span class="degs col-xs-3">{{place.forecast.simpleforecast.forecastday[2].high.fahrenheit}}°</span>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-4 day">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <img  class="day-image" src="{{place.forecast.txt_forecast.forecastday[3].icon_url}}" >
+                    <p class="day-name">{{place.forecast.simpleforecast.forecastday[3].date.weekday}}</p>
+                  </div>
+
+                  <span class="degs col-xs-3">{{place.forecast.simpleforecast.forecastday[3].high.fahrenheit}}°</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row hidden">
+        <div class="col-xs-3 text-right">Zip Code</div>
+        <form ng-submit="findWeather(zip)">
+          <div class="col-xs-6">
+            <input name="goTime" type="text" class="form-control go-time" ng-model="zip" ng-submit="findWeather(zip)" placeholder="97205" />
+          </div>
+          <button type="submit" ng-click="findWeather(zip)" class="btn btn-default" name="goTime">Change</button>
+        </form>
+      </div>
+    </div>
+
+		<!-- End .primary-content -->
+
+		<div class="secondary-content">
+
+		</div><!-- End .secondary-content -->
+
+    <footer class="footer">
+      <div class="container">
+        <a href="http://www.wunderground.com">
+          <img src="img/wundergroundLogo_4c_horz.png" alt="Wunderground Logo">
+          <span>Powered by Weatherunderground</span>
+        </a>
+      </div>
+	  </footer>
+
+
+    <script src="js/app.min.js"></script>
+
+
+</body></html>
